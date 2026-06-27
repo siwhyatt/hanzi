@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 1 — Building Blocks: Your First Five Components</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="lesson-header">
+    <p class="kicker">Lesson 1 · Foundational Components</p>
+    <h1>Building Blocks: Your First Five Components</h1>
+  </header>
+
+  <p>You already recognize a handful of characters from flashcard apps. What those apps probably didn't show you: several of your easiest characters — 人, 木, 水, 口, 日 — aren't just standalone words. They're <em>components</em> that get reused, sometimes in a slightly different shape, inside hundreds of other characters. Once you can spot them inside something bigger, a lot of "memorize this whole word" work turns into "I already know the pieces."</p>
+
+  <h2>Radical vs. component</h2>
+  <p>A <strong>radical</strong> technically means one specific thing: one of the 214 index headers used to look characters up in a dictionary. A <strong>component</strong> is broader — any meaningful chunk a character is built from, whether or not it happens to be the dictionary radical. Most components are <em>semantic</em> (hint at meaning) or <em>phonetic</em> (hint at sound); some do both, some do neither.
+  <p class="sidenote">Research backs the payoff directly: explicitly teaching semantic components measurably helps learners infer the meaning of characters they've never seen before (Lin et al., <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5660119/">PMC, 2017</a>).</p>
+
+  <h2>Your five components</h2>
+  <p>All five below are pictographs — simplified line drawings of the real thing — which is why they're a good starting point. Click a card's flashcard below it once you've looked at the table to test recall.</p>
+
+  <div class="card-grid">
+    <div class="char-card">
+      <div class="glyph">人</div>
+      <div class="variant">亻 (left side)</div>
+      <div class="pinyin">rén</div>
+      <div class="meaning">person</div>
+      <div class="strokes">2 strokes</div>
+    </div>
+    <div class="char-card">
+      <div class="glyph">木</div>
+      <div class="variant">&nbsp;</div>
+      <div class="pinyin">mù</div>
+      <div class="meaning">tree, wood</div>
+      <div class="strokes">4 strokes</div>
+    </div>
+    <div class="char-card">
+      <div class="glyph">水</div>
+      <div class="variant">氵 (left side)</div>
+      <div class="pinyin">shuǐ</div>
+      <div class="meaning">water</div>
+      <div class="strokes">4 strokes</div>
+    </div>
+    <div class="char-card">
+      <div class="glyph">口</div>
+      <div class="variant">&nbsp;</div>
+      <div class="pinyin">kǒu</div>
+      <div class="meaning">mouth, opening</div>
+      <div class="strokes">3 strokes</div>
+    </div>
+    <div class="char-card">
+      <div class="glyph">日</div>
+      <div class="variant">&nbsp;</div>
+      <div class="pinyin">rì</div>
+      <div class="meaning">sun, day</div>
+      <div class="strokes">4 strokes</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    Two of these — 人 + 水 — change shape completely when they move to the left side of another character: 人→亻, 水→氵. This is exactly the kind of thing that makes a known character "invisible" inside a compound if nobody points it out. 木 may become vertically or horizontally "squashed", though it maintains it's basic strokes. 口 and 日 never change shape as components.
+  </div>
+
+  <p>Quick recall — click each card to flip it:</p>
+  <div class="card-grid">
+    <div class="flashcard"><div class="front">人 / 亻</div><div class="back">rén — person</div></div>
+    <div class="flashcard"><div class="front">木</div><div class="back">mù — tree, wood</div></div>
+    <div class="flashcard"><div class="front">水 / 氵</div><div class="back">shuǐ — water</div></div>
+    <div class="flashcard"><div class="front">口</div><div class="back">kǒu — mouth, opening</div></div>
+    <div class="flashcard"><div class="front">日</div><div class="back">rì — sun, day</div></div>
+  </div>
+
+  <h2>Stroke order, briefly</h2>
+  <p>Simplified characters follow the mainland 1997 stroke-order standard. Two rules cover almost everything you'll need for now (see <a href="https://www.archchinese.com/chinese_stroke_order_rules.html">Arch Chinese's stroke order rules</a> for the full set):</p>
+
+  <h3>Rule 1: top-to-bottom, left-to-right — and horizontal before vertical</h3>
+  <p>木 (mù) is a clean example: a horizontal stroke, then a vertical stroke straight through it, then the two diagonals, left side before right side.</p>
+  <ol class="stroke-steps">
+    <li><span class="stroke-glyph">一</span>horizontal, left to right</li>
+    <li><span class="stroke-glyph">丨</span>vertical, top to bottom, crossing the horizontal</li>
+    <li><span class="stroke-glyph">丿</span>diagonal, upper-right to lower-left</li>
+    <li><span class="stroke-glyph">㇏</span>diagonal, upper-left to lower-right</li>
+  </ol>
+
+  <h3>Rule 2: outer strokes before the strokes they enclose, and close last</h3>
+  <p>口 (kǒu) shows this: the left and top-right "frame" goes down first, then the closing bottom stroke seals it — never the other way round.</p>
+  <ol class="stroke-steps">
+    <li><span class="stroke-glyph">丨</span>left vertical</li>
+    <li><span class="stroke-glyph">𠃍</span>top horizontal turning down into the right vertical (one stroke)</li>
+    <li><span class="stroke-glyph">一</span>bottom horizontal, closing the box</li>
+  </ol>
+
+  <p class="sidenote">水's stroke order is genuinely irregular — not a clean application of either rule above — so rather than risk teaching it wrong here, look up the animated stroke order at <a href="https://www.strokeorder.com/">StrokeOrder.com</a> before you practice writing it.</p>
+
+  <h2>Where the payoff shows up: combining components</h2>
+  <p>Here are two real, common characters built only from components you already have:</p>
+
+  <div class="breakdown">
+    <span class="piece">亻</span><span class="op">+</span><span class="piece">木</span><span class="eq">=</span><span class="result">休</span>
+  </div>
+  <p style="text-align:center">xiū — <strong>rest</strong>. A person (亻) leaning against a tree (木).</p>
+
+  <div class="breakdown">
+    <span class="piece">木</span><span class="op">+</span><span class="piece">木</span><span class="eq">=</span><span class="result">林</span>
+  </div>
+  <p style="text-align:center">lín — <strong>forest, grove</strong>. Two trees side by side.</p>
+
+  <p>That's the whole mechanism this course is built on: most characters are not arbitrary shapes to memorize, they're 2-4 known pieces stacked together with a meaning (and sometimes a sound) clue baked in.</p>
+
+  <h2>Check your recall</h2>
+
+  <div class="quiz-mc" data-answer="2">
+    <p class="quiz-question">Which component means "tree / wood"?</p>
+    <div class="quiz-options">
+      <button>人</button>
+      <button>木</button>
+      <button>口</button>
+      <button>日</button>
+    </div>
+    <p class="quiz-feedback"></p>
+  </div>
+
+  <div class="quiz-mc" data-answer="2">
+    <p class="quiz-question">林 (two 木 side by side) means:</p>
+    <div class="quiz-options">
+      <button>single small tree</button>
+      <button>dense forest grove</button>
+      <button>wooden kitchen table</button>
+      <button>falling autumn leaf</button>
+    </div>
+    <p class="quiz-feedback"></p>
+  </div>
+
+  <div class="quiz-mc" data-answer="1">
+    <p class="quiz-question">休 combines 亻 (person) with which component?</p>
+    <div class="quiz-options">
+      <button>木</button>
+      <button>水</button>
+      <button>口</button>
+      <button>日</button>
+    </div>
+    <p class="quiz-feedback"></p>
+  </div>
+
+  <div class="quiz-mc" data-answer="1">
+    <p class="quiz-question">When two strokes cross, which is written first?</p>
+    <div class="quiz-options">
+      <button>the horizontal stroke</button>
+      <button>the vertical stroke</button>
+      <button>the diagonal stroke</button>
+      <button>the dotted stroke</button>
+    </div>
+    <p class="quiz-feedback"></p>
+  </div>
+
+  <h2>Go further</h2>
+  <p>Primary source for this lesson's framing: Olle Linge, <a href="https://www.hackingchinese.com/the-most-common-chinese-words-characters-and-components-for-language-learners-and-teachers/">"The most common Chinese words, characters and components for language learners and teachers"</a> (Hacking Chinese). For a per-character deep dive whenever you're curious about one, the <a href="https://www.outlier-linguistics.com/products/outlier-dictionary-of-chinese-characters">Outlier Dictionary of Chinese Characters</a> is the most rigorous source available.</p>
+
+  <p>Out in the world: today, try spotting 人, 木, 水, 口, or 日 inside signs, menus, or packaging — even just as a part of something bigger you don't fully recognize yet.</p>
+
+  <p class="ask-teacher">Something unclear, or want to go deeper on any of this? Ask your teacher — that's what these sessions are for.</p>
+
+  <nav class="lesson-nav">
+    <a href="../index.html">← Home</a> ·
+    <a href="0002-woman-and-child.html">Lesson 2: Woman and Child (女/子) →</a> ·
+    <a href="../reference/components-glossary.html">Component Glossary (reference)</a>
+  </nav>
+
+</div>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

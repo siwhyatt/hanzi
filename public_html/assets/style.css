@@ -1,0 +1,328 @@
+/* Shared stylesheet for the Simplified Hanzi teaching workspace.
+   Tufte-influenced: generous whitespace, restrained color, type does the work. */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --paper: #fbf9f4;
+  --ink: #1b1b18;
+  --ink-soft: #4a4843;
+  --rule: #d8d2c4;
+  --accent: #9a3324;
+  --accent-soft: #e8d8d2;
+  --good: #2f6f4f;
+  --good-soft: #dcebe2;
+  --bad: #9a3324;
+  --bad-soft: #f3ddd8;
+  --card: #ffffff;
+  --max-width: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 19px; }
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 6rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.lesson-header {
+  padding-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header.lesson-header .kicker {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.25rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-soft); }
+a:hover { text-decoration-color: var(--accent); }
+
+.hanzi, .han {
+  font-family: 'Noto Serif SC', 'Songti SC', 'PingFang SC', 'Microsoft YaHei', serif;
+}
+
+/* --- Component / character cards --- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.char-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 0.75rem;
+  text-align: center;
+}
+
+.char-card .glyph {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.char-card .variant {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.char-card .pinyin {
+  font-style: italic;
+  color: var(--accent);
+  margin: 0.3rem 0 0.1rem;
+}
+
+.char-card .meaning {
+  font-size: 0.95rem;
+}
+
+.char-card .strokes {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.3rem;
+}
+
+/* --- Reference tables --- */
+
+table.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+table.ref-table th, table.ref-table td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.ref-table th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--ink);
+}
+
+table.ref-table .glyph-cell {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+/* --- Breakdown diagram (component -> character) --- */
+
+.breakdown {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1.25rem 0;
+  flex-wrap: wrap;
+}
+
+.breakdown .piece, .breakdown .result {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 2.4rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}
+
+.breakdown .result {
+  border-color: var(--accent);
+}
+
+.breakdown .op, .breakdown .eq {
+  font-size: 1.4rem;
+  color: var(--ink-soft);
+}
+
+/* --- Stroke order step list --- */
+
+ol.stroke-steps {
+  padding-left: 1.4rem;
+}
+ol.stroke-steps li {
+  margin-bottom: 0.4rem;
+}
+ol.stroke-steps .stroke-glyph {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+/* --- Sidenote (Tufte-style margin note, falls back inline on narrow viewports) --- */
+
+.sidenote {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--rule);
+  padding-left: 0.8rem;
+  margin: 1rem 0;
+}
+
+/* --- Callouts --- */
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+  font-size: 0.97rem;
+}
+
+.callout.tip { border-left-color: var(--good); }
+
+/* --- Flashcards (assets/quiz.js) --- */
+
+.flashcard {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  margin: 0.75rem 0;
+}
+
+.flashcard .front {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  font-size: 2.6rem;
+}
+
+.flashcard .back {
+  display: none;
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.flashcard.revealed .back { display: block; }
+
+.flashcard .hint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+}
+
+/* --- Multiple choice quiz --- */
+
+.quiz-mc {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  margin: 1.25rem 0;
+}
+
+.quiz-mc .quiz-question {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.quiz-mc .quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-mc .quiz-options button {
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+}
+
+.quiz-mc .quiz-options button:hover { border-color: var(--ink-soft); }
+
+.quiz-mc .quiz-options button.correct {
+  background: var(--good-soft);
+  border-color: var(--good);
+}
+
+.quiz-mc .quiz-options button.incorrect {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+}
+
+.quiz-mc .quiz-options button:disabled { cursor: default; }
+
+.quiz-mc .quiz-feedback {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+/* --- Nav / footer --- */
+
+nav.lesson-nav, footer.lesson-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.ask-teacher {
+  margin-top: 2.5rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .quiz-mc, .flashcard, nav.lesson-nav, .ask-teacher { display: none; }
+  a { color: var(--ink); text-decoration: none; }
+}

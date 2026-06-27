@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simplified Hanzi — A Component-First Course</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+  .lesson-list li {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--card);
+    margin-bottom: 0.75rem;
+  }
+  .lesson-list a.lesson-link {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .lesson-list a.lesson-link:hover {
+    background: var(--accent-soft);
+    border-radius: 5px;
+  }
+  .lesson-num {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    min-width: 4.5rem;
+  }
+  .lesson-glyphs {
+    font-family: 'Noto Serif SC', 'Songti SC', serif;
+    font-size: 1.35rem;
+    min-width: 7rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .lesson-title {
+    font-weight: 600;
+    flex: 1;
+  }
+  .lesson-blurb {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 0.15rem;
+  }
+  .lesson-body {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 520px) {
+    .lesson-list a.lesson-link { flex-wrap: wrap; }
+    .lesson-glyphs { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="lesson-header">
+    <p class="kicker">Simplified Hanzi · Component-First</p>
+    <h1>Learn to Read Chinese Characters</h1>
+  </header>
+
+  <p>Most characters aren't arbitrary shapes to memorize — they're 2–4 known pieces stacked together, often with a meaning clue built in. This course teaches those pieces first, so each new character you meet is mostly already familiar.</p>
+
+  <p>Ten lessons cover the most common components and enough numerals to read prices, dates, and signs. Each lesson takes 15–30 minutes and includes flashcards and a short quiz.</p>
+
+  <h2>Lessons</h2>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/0001-foundational-components.html">
+        <span class="lesson-num">Lesson 1</span>
+        <span class="lesson-glyphs">人 木 水 口 日</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Building Blocks: Your First Five Components</span>
+          <span class="lesson-blurb">Pictographs that appear inside hundreds of other characters — and two that change shape when they move inside a compound.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0002-woman-and-child.html">
+        <span class="lesson-num">Lesson 2</span>
+        <span class="lesson-glyphs">女 子</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Woman and Child: 女 / 子</span>
+          <span class="lesson-blurb">Two high-frequency components, plus why 子 often means nothing at all as a suffix.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0003-big-small-middle.html">
+        <span class="lesson-num">Lesson 3</span>
+        <span class="lesson-glyphs">大 小 中</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Big, Small, Middle: 大 / 小 / 中</span>
+          <span class="lesson-blurb">Exactly what's printed on every drink, snack, and clothing size — you'll be able to test these immediately.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0004-up-down-out-in.html">
+        <span class="lesson-num">Lesson 4</span>
+        <span class="lesson-glyphs">上 下 出 入</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Up, Down, Out, In: 上 / 下 / 出 / 入</span>
+          <span class="lesson-blurb">Indicative characters — diagrams of a relationship rather than pictures of a thing — and the exit/entrance signs you'll use everywhere.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0005-counting-to-ten.html">
+        <span class="lesson-num">Lesson 5</span>
+        <span class="lesson-glyphs">一 二 三 十</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Counting to Ten (Almost): 一 / 二 / 三 / 十</span>
+          <span class="lesson-blurb">Three are tally marks. The fourth, 十, lets you read every number from 10 to 99 without learning anything new.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0006-counting-completed.html">
+        <span class="lesson-num">Lesson 6</span>
+        <span class="lesson-glyphs">四 五 六 七 八 九</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Counting to Ten, Completed: 四 / 五 / 六 / 七 / 八 / 九</span>
+          <span class="lesson-blurb">The remaining six digits — none follow the tally pattern, and one has a documented reason for breaking it.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0007-mountain-fire-earth.html">
+        <span class="lesson-num">Lesson 7</span>
+        <span class="lesson-glyphs">山 火 土</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Mountain, Fire, Earth: 山 / 火 / 土</span>
+          <span class="lesson-blurb">Four of the five classical elements are now complete. 山 closes two loops from earlier lessons; 火 doubles into a blaze.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0008-moon-sky-year.html">
+        <span class="lesson-num">Lesson 8</span>
+        <span class="lesson-glyphs">月 天 年</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Moon, Sky, Year: 月 / 天 / 年</span>
+          <span class="lesson-blurb">With all digits in hand, three more characters let you read and write complete dates in Chinese.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0009-hundred-thousand.html">
+        <span class="lesson-num">Lesson 9</span>
+        <span class="lesson-glyphs">百 千</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Hundred, Thousand: 百 / 千</span>
+          <span class="lesson-blurb">Two characters that take you into the numbers you actually need for prices, hotel rates, and train tickets.</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/0010-metal-shell-money.html">
+        <span class="lesson-num">Lesson 10</span>
+        <span class="lesson-glyphs">金 贝</span>
+        <span class="lesson-body">
+          <span class="lesson-title">Metal, Shell: Money Vocabulary — 金 / 贝</span>
+          <span class="lesson-blurb">The fifth classical element closes out, and the "shell/cowrie" component explains a cluster of modern money vocabulary.</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+
+  <h2>Reference</h2>
+  <p><a href="reference/components-glossary.html">Component Glossary</a> — every component, compound character, and word taught across all lessons, in one searchable table.</p>
+
+</div>
+</body>
+</html>
