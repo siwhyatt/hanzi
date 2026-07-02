@@ -182,19 +182,35 @@ table.ref-table .glyph-cell {
   color: var(--ink-soft);
 }
 
-/* --- Stroke order step list --- */
+/* --- Stroke order diagram (assets/strokes, assets/strokes-animated) --- */
 
-ol.stroke-steps {
-  padding-left: 1.4rem;
+.stroke-diagram {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 1.25rem 0;
+  flex-wrap: wrap;
 }
-ol.stroke-steps li {
-  margin-bottom: 0.4rem;
+
+.stroke-diagram img {
+  width: 150px;
+  height: 150px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
 }
-ol.stroke-steps .stroke-glyph {
-  font-family: 'Noto Serif SC', 'Songti SC', serif;
-  font-size: 1.2rem;
-  margin-right: 0.3rem;
+
+.stroke-diagram .stroke-meta {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
 }
+
+.stroke-diagram .stroke-watch {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+
 
 /* --- Sidenote (Tufte-style margin note, falls back inline on narrow viewports) --- */
 
