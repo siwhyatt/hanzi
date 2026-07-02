@@ -321,6 +321,106 @@ table.ref-table .glyph-cell {
   min-height: 1.2em;
 }
 
+/* --- Site header (assets/nav.js): home link + lessons dropdown --- */
+
+header.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.site-nav-home {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-nav-home:hover { color: var(--accent); }
+
+.site-nav-toggle {
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.site-nav-toggle:hover { border-color: var(--ink-soft); }
+
+.site-nav-toggle[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+
+.site-nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  position: absolute;
+  right: 1.5rem;
+  top: calc(100% + 0.4rem);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  min-width: 260px;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: none;
+}
+
+.site-nav-menu.open { display: block; }
+
+.site-nav-menu a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  font-size: 0.92rem;
+}
+
+.site-nav-menu a:hover { background: var(--accent-soft); }
+
+.site-nav-menu a.current { color: var(--accent); font-weight: 600; }
+
+.site-nav-menu .menu-num {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  min-width: 2.4rem;
+}
+
+.site-nav-menu .menu-glyphs {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  color: var(--accent);
+  min-width: 4.5rem;
+}
+
+.site-nav-menu .menu-divider {
+  margin: 0.4rem 0.2rem;
+  border: none;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 520px) {
+  .site-nav-menu { right: 1rem; min-width: 220px; }
+}
+
 /* --- Nav / footer --- */
 
 nav.lesson-nav, footer.lesson-footer {
@@ -339,6 +439,6 @@ nav.lesson-nav, footer.lesson-footer {
 
 @media print {
   body { background: #fff; padding: 0; }
-  .quiz-mc, .flashcard, nav.lesson-nav, .ask-teacher { display: none; }
+  .quiz-mc, .flashcard, nav.lesson-nav, .ask-teacher, header.site-nav { display: none; }
   a { color: var(--ink); text-decoration: none; }
 }
