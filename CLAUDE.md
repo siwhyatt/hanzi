@@ -22,6 +22,8 @@ python3 -m http.server 8080 --directory public_html
 
 Uses `rsync` to push `public_html/` to the Hostinger VPS (`hostinger` SSH alias, remote path `/home/hanzi.fullstack.cat/public_html/`). Requires the `hostinger` host to be configured in `~/.ssh/config`.
 
+The server sends a 7-day `Cache-Control` header on `style.css`. Every page links shared assets with a cache-busting query string (`style.css?v=2`, `quiz.js?v=2`, `nav.js?v=2`) — bump the version number across all pages whenever `style.css`, `quiz.js`, or `nav.js` changes, or returning visitors won't see the update for up to a week.
+
 ## Structure
 
 ```
